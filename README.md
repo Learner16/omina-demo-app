@@ -30,7 +30,7 @@ omnia-demo-app/
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, first do `npm install` and then you can run:
 
 ### `npm start`
 
