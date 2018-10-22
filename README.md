@@ -66,4 +66,4 @@ to check the lint errors, if any.
 
 ## Supported Browsers
 
-By default, the generated project supports all modern browsers.<br>
+The generated project supports all modern browsers.
