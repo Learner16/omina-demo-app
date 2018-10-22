@@ -14,6 +14,8 @@ class News extends Component {
     this.getNewsfeed();
   }
 
+  /* getNewfeed () - handles the API call and fetch the data */
+
   getNewsfeed = () => {
     axios.get('?country=us&category=business&apiKey=004d8fc28e2b43438a01fec8e33f8360').then((res) => {
       this.setState({
@@ -23,6 +25,8 @@ class News extends Component {
       });
     });
   }
+
+  /* filterNewsfeed () - filtering the news cards to show on search */
 
   filterNewsfeed = (event) => {
     const { newsfeed } = this.state;
