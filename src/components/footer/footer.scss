@@ -1,0 +1,32 @@
+@import '../../styles/variables.scss';
+
+.footer {
+  background-color: $black-scale-1;
+  color: $grey-scale-3;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 25px;
+  font-size: 12px;
+  font-weight: bold;
+  position: fixed;
+  bottom: 0px;
+  width: 100%;
+  ul {
+    li {
+        display: inline-block;
+        margin-right: 5px;
+        a {
+          color: $grey-scale-4;
+          text-decoration: none;
+        }
+      &:after {
+        content: ' | '
+      }
+      &:last-child {
+        &:after {
+          content: ' '
+        }
+      }
+    }
+  }
+}
