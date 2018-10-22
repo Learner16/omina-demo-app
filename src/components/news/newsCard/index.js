@@ -23,5 +23,5 @@ const NewsCard = (props) => {
 export default NewsCard;
 
 NewsCard.propTypes = {
-  data: propTypes.objectOf.isRequired,
+  data: propTypes.objectOf(propTypes.shape).isRequired,
 };
