@@ -1,0 +1,50 @@
+@import '../../styles/variables.scss';
+
+.carousel-shaped {
+  float: left;
+  height: inherit;
+  width: 100%;
+  float: right;
+  background-color: $black; 
+  shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+  shape-margin: 20px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 80%);
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  & .slider-wrapper.axis-horizontal .slider .slide {
+    background-color: $white;
+  }
+  &.carousel-slider .control-arrow {
+    position: absolute;
+    bottom: 60%;
+    &.control-next {
+      right: 80%;
+    }
+    &.control-prev {
+      left: 15%;
+    }
+    &:hover {
+      background-color: transparent;
+    }
+    @media only screen and (max-width: 412px) {
+        bottom: 40%;
+        &.control-next {
+        right: 70%;
+        }
+    }
+    @media only screen and (max-width: 1024px) {
+        bottom: 50%;
+        &.control-next {
+          right: 75%;
+        }
+      }
+    }
+  }
+}

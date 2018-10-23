@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaCaretDown } from 'react-icons/fa';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import { Carousel } from 'react-responsive-carousel';
+import CustomCarousel from '../customCarousel';
 import './header.scss';
 import header from '../../assets/header.jpg';
 
@@ -22,21 +22,7 @@ const carouselData = [{
 
 const Header = () => (
   <div className="header">
-    <Carousel
-      showThumbs={false}
-      showIndicators={false}
-      showStatus={false}
-      selectedItem={1}
-      className="shaped"
-    >
-      {
-        carouselData.map(slide => (
-          <div key={slide.header}>
-            <img alt="900x500" src={slide.imageUrl} />
-          </div>
-        ))
-      }
-    </Carousel>
+    <CustomCarousel carouselData={carouselData} />
     <div className="navigation">
       <div>
         <select name="language" id="language">
