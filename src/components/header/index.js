@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaCaretDown } from 'react-icons/fa';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import CustomCarousel from '../customCarousel';
+import HeroCarousel from '../heroCarousel';
 import './header.scss';
 import header from '../../assets/header.jpg';
 
@@ -22,7 +22,7 @@ const carouselData = [{
 
 const Header = () => (
   <div className="header">
-    <CustomCarousel carouselData={carouselData} />
+    <HeroCarousel carouselData={carouselData} />
     <div className="navigation">
       <div>
         <select name="language" id="language">

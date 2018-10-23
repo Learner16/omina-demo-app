@@ -1,9 +1,9 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import { Carousel } from 'react-responsive-carousel';
-import './customCarousel.scss';
+import './heroCarousel.scss';
 
-const CustomCarousel = ({ carouselData }) => (
+const HeroCarousel = ({ carouselData }) => (
   <Carousel
     showThumbs={false}
     showIndicators={false}
@@ -20,8 +20,8 @@ const CustomCarousel = ({ carouselData }) => (
   </Carousel>
 );
 
-CustomCarousel.propTypes = {
+HeroCarousel.propTypes = {
   carouselData: propTypes.arrayOf(propTypes.shape).isRequired,
 };
 
-export default CustomCarousel;
+export default HeroCarousel;
