@@ -9,11 +9,10 @@ const CustomCarousel = ({ carouselData }) => (
     showIndicators={false}
     showStatus={false}
     selectedItem={1}
-    className="carousel-shaped"
   >
     {
       carouselData.map(slide => (
-        <div key={slide.header}>
+        <div key={slide.header} className="carousel-shaped">
           <img alt={slide.header} src={slide.imageUrl} />
         </div>
       ))
