@@ -1,36 +1,44 @@
 @import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
 
 .news-container {
   padding: 55px;
   margin-top: 30px;
-  .news-header{
+
+  .news-header {
     padding: 30px 50px;
     display: flex;
     justify-content: space-between;
+
     div {
       font-weight: bold;
       font-size: 20px;
+
       input {
         border: none;
         border-bottom: 1px solid;
         font-size: 12px;
         color: $grey-scale-2;
       }
+
       .search-icon {
         font-size: 10px;
         color: $grey-scale-2;
         margin-right: 10px;
       }
     }
-    @media only screen and (max-width: 600px) {
+
+    @include mobile {
       flex-direction: column;
       align-items: center;
     }
   }
+
   .news-content {
     padding: 30px 50px;
     display: flex;
     flex-direction: row;
+
     .news-card {
       min-height: 100px;
       width: 33%;
@@ -40,37 +48,55 @@
       box-shadow: 0px 0px 5px 1px $grey-scale-3;
       margin-right: 2%;
       margin-bottom: 30px;
+
       img {
         height: 200px;
         width: 100%;
       }
+
       div {
         padding: 0 10px;
-        .date, 
+
+        .date,
         .source {
           font-size: 12px;
           color: $grey-scale-1;
           margin-top: 10px;
         }
+
         .title {
           margin-top: 10px;
-          // min-height: 95px;
           font-size: 14px;
           font-weight: bold;
         }
+
         .source {
           margin-bottom: 10px;
           font-weight: bold;
         }
       }
     }
-    // p.news-card{
-    //   box-shadow: 0px 0px 5px 1px $white;
-    //   width: 100%;
-    // }
-    @media only screen and (max-width: 412px) {
+
+    p.news-card {
+      box-shadow: 0px 0px 5px 1px $white;
+      width: 100%;
+    }
+
+    @include responsive {
+      flex-direction: column;
+      justify-content: center;
+
+      .news-card {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 15px;
+      }
+    }
+
+    @include mobile {
       padding: 0;
       flex-direction: column;
+
       .news-card {
         width: 100%;
       }

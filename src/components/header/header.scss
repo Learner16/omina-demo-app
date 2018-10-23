@@ -1,8 +1,10 @@
 @import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
 
 .header {
   height: 50vh;
   position: relative;
+
   .navigation {
     display: flex;
     position: absolute;
@@ -11,6 +13,7 @@
     padding: 10px 60px;
     justify-content: space-between;
     background-color: transparent;
+
     select {
       border-style: unset;
       background: transparent;
@@ -18,9 +21,11 @@
       -webkit-appearance: none;
       appearance: none;
     }
+
     .icon-caret {
       color: $white-scale-1;
     }
+
     .menu {
       div {
         width: 25px;
@@ -29,24 +34,29 @@
         margin: 5px 0;
       }
     }
-    @media screen and (max-width: 412px) {
+
+    @include mobile {
       padding: 10px 40px;
     }
   }
+
   .content {
     position: absolute;
     top: 30%;
     left: 10%;
     width: 30%;
+
     .heading {
       font-weight: 800;
       font-size: 25px;
     }
+
     .sub-heading {
       font-size: 12px;
       color: $white-scale-2;
       font-weight: bold;
     }
+
     .cta-button {
       border-radius: 25px;
       font-size: 12px;
@@ -55,24 +65,30 @@
       border-color: $blue-scale-1;
       color: $white;
     }
-    @media only screen and (max-width: 412px) {
+
+    @include mobile {
       position: absolute;
       width: 40%;
+
       .heading {
         font-size: 18px;
       }
+
       .sub-heading {
         font-size: 10px;
       }
+
       .cta-button {
         padding: 5px 15px;
       }
     }
   }
-  @media only screen and (max-width: 1024px) {
+
+  @include tablet {
     height: 40vh;
   }
-  @media only screen and (max-width: 412px) {
+
+  @include mobile {
     height: 30vh;
   }
 }
